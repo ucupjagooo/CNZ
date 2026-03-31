@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNZ SHOP | Top Up & Gear Resmi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --pb-red: #ff0000;
+            --pb-yellow: #ffcc00;
+            --pb-dark: #080808;
+            --glass: rgba(255, 255, 255, 0.02);
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--pb-dark);
+            color: #ffffff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        .oswald { font-family: 'Oswald', sans-serif; }
+        
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .glass-card:hover {
+            border-color: var(--pb-yellow);
+            transform: translateY(-5px);
+            background: rgba(255, 204, 0, 0.03);
+        }
+
+        .btn-buy {
+            background: linear-gradient(135deg, #ffcc00 0%, #ff8800 100%);
+            color: black;
+            font-weight: 800;
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn-buy:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
+        }
+
+        input, select {
+            background: rgba(255,255,255,0.05) !important;
+            border: 1px solid rgba(255,255,255,0.1) !important;
+            color: white !important;
+            border-radius: 8px;
+            padding: 8px 12px;
+            outline: none;
+        }
+        input:focus, select:focus {
+            border-color: var(--pb-yellow) !important;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: var(--pb-yellow);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .badge-new {
+            background: var(--pb-red);
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <nav class="fixed w-full z-[100] px-6 py-4 md:px-16 flex justify-between items-center bg-black/70 backdrop-blur-3xl border-b border-white/5">
+        <div class="flex items-center gap-4">
+            <a href="index.html" class="flex items-center gap-4">
+                <div class="w-10 h-10">
+                    <img src="Photoroom-20260118_023002947.png" alt="Logo" class="w-full h-full object-contain" onerror="this.src='https://via.placeholder.com/40?text=CNZ'">
+                </div>
+                <div class="flex flex-col">
+                    <span class="oswald text-2xl font-black italic tracking-tighter leading-none uppercase">CNZ <span class="text-yellow-500">SHOP</span></span>
+                </div>
+            </a>
+        </div>
+        
+        <div class="hidden lg:flex items-center gap-12 text-[11px] font-extrabold uppercase tracking-[0.2em] text-zinc-400">
+            <a href="index.html" class="nav-link hover:text-white">Kembali ke Beranda</a>
+            <a href="#pb-cash" class="nav-link hover:text-white">PB Cash</a>
+            <a href="#items" class="nav-link hover:text-white">Sparing & Gear</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <div class="text-right hidden sm:block">
+                <p class="text-[9px] text-zinc-500 font-bold uppercase tracking-widest">Metode Pembayaran</p>
+                <p class="text-[10px] text-white font-black">OTOMATIS & WA</p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Shop -->
+    <section class="pt-40 pb-20 px-6 text-center relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-yellow-500/5 blur-[120px] rounded-full -z-10"></div>
+        <h1 class="oswald text-6xl md:text-8xl font-black italic mb-6 tracking-tighter uppercase">CNZ <span class="text-yellow-500">MARKET</span></h1>
+        <p class="text-zinc-400 max-w-2xl mx-auto text-sm md:text-base font-medium mb-10">
+            Top Up PB Cash resmi atau atur jadwal Sparing dan pesan Jersey eksklusif CNZ Esport di sini.
+        </p>
+    </section>
+
+    <!-- Kategori: PB Cash -->
+    <section id="pb-cash" class="py-10 px-6 max-w-7xl mx-auto">
+        <div class="flex items-center gap-6 mb-12">
+            <h2 class="oswald text-3xl font-black italic uppercase tracking-tighter text-yellow-500">Top Up PB Cash</h2>
+            <div class="h-[1px] flex-1 bg-white/10"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass-card p-8 rounded-[32px] flex flex-col items-center text-center">
+                <img src="https://via.placeholder.com/150?text=1200+Cash" alt="PB Cash" class="w-32 h-32 mb-6 object-contain">
+                <h3 class="oswald text-xl font-bold mb-2 uppercase">1,200 PB Cash</h3>
+                <p class="text-zinc-500 text-sm mb-6 font-bold">Rp 10.000,-</p>
+                <a href="https://www.pointblank.id/gold/main" target="_blank" class="btn-buy w-full py-3 text-xs uppercase tracking-widest">Beli Sekarang</a>
+            </div>
+
+            <div class="glass-card p-8 rounded-[32px] flex flex-col items-center text-center relative">
+                <div class="absolute top-4 right-6 badge-new">Populer</div>
+                <img src="https://via.placeholder.com/150?text=6000+Cash" alt="PB Cash" class="w-32 h-32 mb-6 object-contain">
+                <h3 class="oswald text-xl font-bold mb-2 uppercase">6,000 PB Cash</h3>
+                <p class="text-zinc-500 text-sm mb-6 font-bold">Rp 50.000,-</p>
+                <a href="https://www.pointblank.id/gold/main" target="_blank" class="btn-buy w-full py-3 text-xs uppercase tracking-widest">Beli Sekarang</a>
+            </div>
+
+            <div class="glass-card p-8 rounded-[32px] flex flex-col items-center text-center">
+                <img src="https://via.placeholder.com/150?text=12000+Cash" alt="PB Cash" class="w-32 h-32 mb-6 object-contain">
+                <h3 class="oswald text-xl font-bold mb-2 uppercase">12,000 PB Cash</h3>
+                <p class="text-zinc-500 text-sm mb-6 font-bold">Rp 100.000,-</p>
+                <a href="https://www.pointblank.id/gold/main" target="_blank" class="btn-buy w-full py-3 text-xs uppercase tracking-widest">Beli Sekarang</a>
+            </div>
+
+            <div class="glass-card p-8 rounded-[32px] flex flex-col items-center text-center">
+                <img src="https://via.placeholder.com/150?text=30000+Cash" alt="PB Cash" class="w-32 h-32 mb-6 object-contain">
+                <h3 class="oswald text-xl font-bold mb-2 uppercase">30,000 PB Cash</h3>
+                <p class="text-zinc-500 text-sm mb-6 font-bold">Rp 250.000,-</p>
+                <a href="https://www.unipin.com/id/point-blank" target="_blank" class="btn-buy w-full py-3 text-xs uppercase tracking-widest">Beli di UniPin</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kategori: Sparing & Jersey -->
+    <section id="items" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="flex items-center gap-6 mb-12">
+            <h2 class="oswald text-3xl font-black italic uppercase tracking-tighter text-red-600">Sparing & Official Gear</h2>
+            <div class="h-[1px] flex-1 bg-white/10"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- Form Sparing -->
+            <div class="glass-card p-8 md:p-10 rounded-[40px] border-red-600/20">
+                <div class="flex items-center gap-4 mb-8">
+                    <i data-lucide="swords" class="w-10 h-10 text-red-600"></i>
+                    <h3 class="oswald text-2xl font-black uppercase">Jadwal Sparing (CW)</h3>
+                </div>
+                
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-[10px] uppercase font-bold text-zinc-500 mb-2">Pilih Tanggal Sparing</label>
+                        <input type="date" id="sparing-date" class="w-full">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[10px] uppercase font-bold text-zinc-500 mb-2">Jam Mulai</label>
+                            <input type="time" id="sparing-start" class="w-full">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] uppercase font-bold text-zinc-500 mb-2">Jam Selesai</label>
+                            <input type="time" id="sparing-end" class="w-full">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase font-bold text-zinc-500 mb-2">Nama Clan Anda</label>
+                        <input type="text" id="sparing-clan" placeholder="Contoh: CNZ Esport" class="w-full">
+                    </div>
+                    <button onclick="sendSparingWA()" class="btn-buy w-full py-4 mt-4 text-xs uppercase tracking-widest">Kirim Jadwal ke WA Admin</button>
+                </div>
+            </div>
+
+            <!-- Form Jersey -->
+            <div class="glass-card p-8 md:p-10 rounded-[40px] border-red-600/20">
+                <div class="flex items-center gap-4 mb-8">
+                    <i data-lucide="shirt" class="w-10 h-10 text-red-600"></i>
+                    <h3 class="oswald text-2xl font-black uppercase">Pesan Jersey CNZ 2026</h3>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-[10px] uppercase font-bold text-zinc-500 mb-2">Nama Punggung (Nickname)</label>
+                        <input type="text" id="jersey-name" placeholder="Contoh: CNZ_KING" class="w-full">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase font-bold text-zinc-500 mb-2">Pilih Ukuran</label>
+                        <select id="jersey-size" class="w-full">
+                            <option value="S">Small (S)</option>
+                            <option value="M">Medium (M)</option>
+                            <option value="L">Large (L)</option>
+                            <option value="XL">Extra Large (XL)</option>
+                            <option value="XXL">Double XL (XXL)</option>
+                        </select>
+                    </div>
+                    <div class="p-4 bg-white/5 rounded-xl border border-white/5">
+                        <p class="text-[10px] text-zinc-400 leading-relaxed italic">
+                            *Jersey menggunakan bahan Drifit Premium dengan sablon sublimasi anti luntur. Estimasi pengerjaan 7-14 hari kerja.
+                        </p>
+                    </div>
+                    <button onclick="sendJerseyWA()" class="btn-buy w-full py-4 mt-4 text-xs uppercase tracking-widest">Pesan Sekarang (WA)</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 border-t border-white/5 bg-black px-6 text-center">
+        <p class="text-zinc-600 text-[10px] font-bold uppercase tracking-[0.5em] mb-4">Transaksi Aman & Terpercaya</p>
+        <div class="flex justify-center gap-8 opacity-30 grayscale mb-8 flex-wrap">
+            <span class="font-black text-xl italic uppercase">UniPin</span>
+            <span class="font-black text-xl italic uppercase">Codashop</span>
+            <span class="font-black text-xl italic uppercase">Zepetto</span>
+        </div>
+        <p class="text-zinc-800 text-[9px] uppercase tracking-widest">© 2026 CNZ ESPORT+ MARKETPLACE</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const adminPhone = "6285179510511";
+
+        function sendSparingWA() {
+            const date = document.getElementById('sparing-date').value;
+            const start = document.getElementById('sparing-start').value;
+            const end = document.getElementById('sparing-end').value;
+            const clan = document.getElementById('sparing-clan').value;
+
+            if(!date || !start || !end || !clan) {
+                alert("Mohon lengkapi semua data jadwal sparing!");
+                return;
+            }
+
+            const message = `Halo Admin CNZ, kami dari Clan *${clan}* ingin mengajak Sparing/CW pada:\n\n` +
+                            `📅 Tanggal: ${date}\n` +
+                            `⏰ Jam: ${start} s/d ${end} WIB\n\n` +
+                            `Apakah slot tersedia?`;
+            
+            const encoded = encodeURIComponent(message);
+            window.open(`https://wa.me/${adminPhone}?text=${encoded}`, '_blank');
+        }
+
+        function sendJerseyWA() {
+            const name = document.getElementById('jersey-name').value;
+            const size = document.getElementById('jersey-size').value;
+
+            if(!name) {
+                alert("Mohon isi nama punggung untuk Jersey!");
+                return;
+            }
+
+            const message = `Halo Admin CNZ, saya mau pesen Jersey CNZ 2026 Official:\n\n` +
+                            `👕 Nama Punggung: *${name}*\n` +
+                            `📏 Ukuran: *${size}*\n\n` +
+                            `Mohon info detail pembayaran dan ongkirnya Bang.`;
+            
+            const encoded = encodeURIComponent(message);
+            window.open(`https://wa.me/${adminPhone}?text=${encoded}`, '_blank');
+        }
+    </script>
+</body>
+</html>
